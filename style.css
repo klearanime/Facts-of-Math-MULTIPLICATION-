@@ -1,5 +1,5 @@
 .app{
-
+    
 }
 
 #butterfly {
@@ -14,7 +14,28 @@
     width: 350px;
 }
 
+#second {
+    display: flex;
+    flex-direction: column;
+
+}
+
 #cardArea {
-    font-size: 75px;
+    font-size: 62px;
     margin-top: 10px;
+}
+
+#userInput {
+    background-color: aquamarine;
+    width: 1in;
+    height: 1in;
+    font-size: 62px;
+    display: flex;
+}
+
+#check {
+    background-color: rgb(231, 241, 245);
+    width: 3in;
+    height: .5in;
+    font-size: 30px;
 }
