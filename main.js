@@ -4,28 +4,36 @@ let multiplicand = Math.floor(Math.random()*12) + 1
 let correctAnswer = multiplier * multiplicand
 // grab question, user input and answer
 const cardText = document.querySelector('#cardArea')
-const userInput = document.querySelector('#userInput')
+// const userInput = document.querySelector('#userInput')
 const correctness = document.querySelector('#check')
 // function to make the problem appear
 const makeProblem = () => {
-    cardText.innerText = multiplier + 'X' + multiplicand + '=' + correctAnswer
+    multiplier = Math.floor(Math.random()*12) + 1
+    multiplicand = Math.floor(Math.random()*12) + 1
+    correctAnswer = multiplier * multiplicand
+    cardText.innerText = multiplier + 'X' + multiplicand
 }
 makeProblem()
 
 
 // function to make the answer appear and check for correctness
 const userAnswer = () => {
+    const userInput = document.querySelector('#userInput')
     let toNumber = parseInt(userInput.value)
+
     if (correctAnswer === toNumber) {
-        // do something
         correctness.style.color = "green"
         correctness.innerText = 'CORRECT!' + ' 😎'
-        // set timer 2000
-        makeProblem()
+        userInput.value = ""
+        userInput.placeholder = 'answer'
+        userInput.style.fontSize = '20px'
+        setTimeout(makeProblem,2000)
     } else  {
         correctness.style.color = "red"
         correctness.innerText = 'INCORRECT' + ' 💔'
-        // try again
+        userInput.placeholder = 'try again'
+        userInput.value = ''
+        userInput.style.fontSize = '20px'
     }
     
 } 
