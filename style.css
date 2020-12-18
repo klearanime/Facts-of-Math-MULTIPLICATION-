@@ -1,5 +1,5 @@
 .app{
-    
+    background-color: rgb(197, 197, 211);
 }
 
 #butterfly {
@@ -10,8 +10,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 400px;
     width: 350px;
+}
+
+#first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #second {
@@ -38,4 +44,16 @@
     width: 3in;
     height: .5in;
     font-size: 30px;
+}
+
+@media (max-width: 700px) {
+    #first {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #second {
+        height: 50%;
+        margin-bottom: 20px;
+    }
 }
