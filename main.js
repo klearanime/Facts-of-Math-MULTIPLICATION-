@@ -51,3 +51,23 @@ correctness.addEventListener('click', userAnswer)
 
 console.log('checking')
 console.log("it's broken below this point")
+
+// const star = (num) => {
+//     let counter = 0
+//     for (let i = 0; i < num.length; i++) {
+//         if (correctAnswer) {
+//             counter++
+//         }
+        
+//     }
+// }
+
+// let numPoints = 0;    
+
+// function points = () {
+//     if(++score >= str.length) {    
+//         numPoints++;
+//         document.getElementById("points").textContent = "Score: " + numPoints; 
+//     }
+// }
+
